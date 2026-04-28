@@ -170,9 +170,59 @@
       .card { padding: 28px 24px; }
       header h1 { font-size: 1.3rem; }
     }
+
+    /* Home Button */
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: rgba(26, 26, 26, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid #333;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #e0e0e0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      z-index: 1000;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .home-button:hover {
+      background: #2a2a2a;
+      border-color: #f5a623;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      color: #f5a623;
+    }
+
+    .home-button img {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid rgba(245, 166, 35, 0.4);
+    }
+
+    @media (max-width: 1100px) {
+      .home-button {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+    }
   </style>
 </head>
 <body>
+  <a href="https://zhewangjames.github.io/CapyOrangeMacroRecorder-site/" class="home-button">
+    <img src="logo.jpg" alt="CapyOrange Logo">
+    <span>Back to Home</span>
+  </a>
 
   <header>
     <div class="logo-row">
